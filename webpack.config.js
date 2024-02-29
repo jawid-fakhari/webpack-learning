@@ -1,4 +1,6 @@
 const path = require("path");
+//const Webpack = require("webpack");
+//const WebpackDevServer = require("webpack-dev-server");
 
 module.exports = {
   entry: "./src/index.js",
@@ -6,6 +8,10 @@ module.exports = {
     filename: "main.js",
     path: path.resolve(__dirname, "dist"),
     assetModuleFilename: "images/[hash][ext][query]",
+  },
+  devServer: {
+    contentBase: path.join(__dirname, "dist"),
+    port: 8080,
   },
   module: {
     rules: [
