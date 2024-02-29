@@ -5,6 +5,7 @@ module.exports = {
   output: {
     filename: "main.js",
     path: path.resolve(__dirname, "dist"),
+    assetModuleFilename: "images/[hash][ext][query]",
   },
   module: {
     rules: [
@@ -21,6 +22,11 @@ module.exports = {
       {
         test: /\.css$/,
         use: [{ loader: "style-loader" }, { loader: "css-loader" }],
+      },
+      {
+        test: /\.jpg$/,
+        use: [{ loader: "url-loader" }],
+        type: "javascript/auto",
       },
     ],
   },

@@ -2,3 +2,8 @@ h1 {
   font-family: Arial, Helvetica, sans-serif;
   color: salmon;
 }
+#image {
+  background: url("myImage.jpg");
+  width: 500px;
+  height: 300px;
+}
