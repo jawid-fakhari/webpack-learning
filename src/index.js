@@ -1,3 +1,7 @@
-const $ = require("jquery");
+import React from "react";
 
-$("#target").html("hello firends");
+import { render } from "react-dom";
+
+const Greeting = () => <h1>Hello React!</h1>;
+
+render(<Greeting />, document.getElementById("target"));
