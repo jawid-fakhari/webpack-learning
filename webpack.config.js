@@ -25,8 +25,8 @@ module.exports = {
       },
       {
         test: /\.jpg$/,
+        dependency: { not: ["url"] },
         use: [{ loader: "url-loader" }],
-        type: "javascript/auto",
       },
     ],
   },
